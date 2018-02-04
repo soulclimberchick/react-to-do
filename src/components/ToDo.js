@@ -1,15 +1,12 @@
-import React, { component } from 'react';
-import './App.css';
-import toDo from './components/ToDo.js';
+import React, { Component } from 'react';
 
-class ToDo extends component {
+class ToDo extends Component {
   render() {
-    return  (
-      <div className="App">
-        <ul>
-          <ToDo />
-          <ToDo />
-        </ul>
+    return (
+      <li>
+        <input type="checkbox" checked={ this.props.isCompleted } />
+        <span>{ this.props.description }</span>
+      </li>
     );
   }
 }
